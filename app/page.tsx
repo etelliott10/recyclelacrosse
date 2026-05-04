@@ -39,10 +39,10 @@ const programs = [
 ];
 
 const gearImages = [
-  { src: "https://images.unsplash.com/photo-1661895610423-3362a79211c4?w=500&q=80", alt: "Lacrosse head",          label: "Heads"       },
-  { src: "https://images.unsplash.com/photo-1624992152845-9e54aab7aa86?w=500&q=80", alt: "Lacrosse shaft",         label: "Shafts"      },
-  { src: "https://images.unsplash.com/photo-1623156884380-a080a56ddc93?w=500&q=80", alt: "Lacrosse helmet",        label: "Helmets"     },
-  { src: "https://images.unsplash.com/photo-1531951844469-c0ac27049ad0?w=500&q=80", alt: "Lacrosse pads & gloves", label: "Pads & Gloves" },
+  { src: "/images/lacrosse-heads.png",                                              alt: "Lacrosse head",          label: "Heads"       },
+  { src: "/images/lacrosse-shafts.png",                                             alt: "Lacrosse shaft",         label: "Shafts"      },
+  { src: "/images/lacrosse-helmets.png",                                            alt: "Lacrosse helmet",        label: "Helmets"     },
+  { src: "/images/lacrosse-equipment.png",                                          alt: "Lacrosse pads & gloves", label: "Pads & Gloves" },
 ];
 
 export default function HomePage() {
@@ -86,7 +86,7 @@ export default function HomePage() {
           <div className={s.gearGrid}>
             {gearImages.map(({ src, alt, label }) => (
               <div key={label} className={s.gearItem}>
-                <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 50vw, 25vw" />
                 <div className={s.gearOverlay}>
                   <span className={s.gearLabel}>{label}</span>
                 </div>
