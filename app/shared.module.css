@@ -1,0 +1,105 @@
+/* Shared across inner page heroes and sections */
+
+.hero {
+  background: var(--green-9);
+  color: #fff;
+  padding: 7rem 1.5rem;
+  text-align: center;
+}
+
+.heroInner { max-width: 56rem; margin: 0 auto; }
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.92);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtext {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.82);
+  max-width: 38rem;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Shared section containers */
+.section     { padding: 5rem 1.5rem; }
+.sectionAlt  { padding: 5rem 1.5rem; background: var(--green-1); border-top: 1px solid var(--green-2); }
+.inner       { max-width: 72rem; margin: 0 auto; }
+.innerNarrow { max-width: 52rem; margin: 0 auto; }
+
+.sectionTitle {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--gray-900);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSubtext {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--gray-500);
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+
+/* Shared buttons */
+.btnGreen {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  background: var(--green-9);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-top: 1.25rem;
+}
+
+.btnGreen:hover { background: var(--green-10); }
+
+.btnOutline {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  background: transparent;
+  color: var(--green-9);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--green-9);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-top: 1.25rem;
+}
+
+.btnOutline:hover { background: var(--green-1); }
+
+.ctaBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

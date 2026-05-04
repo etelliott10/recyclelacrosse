@@ -1,0 +1,135 @@
+.heroProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heroProduct { flex-direction: row; justify-content: center; }
+}
+
+.productIcon {
+  width: 11rem;
+  height: 11rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  flex-shrink: 0;
+}
+
+.productInfo { max-width: 32rem; }
+
+.heroPrice {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.heroPriceNote {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2rem;
+}
+
+.features {
+  background: var(--green-1);
+  border-bottom: 1px solid var(--green-2);
+  padding: 1.25rem 1.5rem;
+}
+
+.featureList {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  justify-content: center;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+/* Content */
+.contentSection { padding: 5rem 1.5rem; }
+
+.details {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.detailTitle  { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 1.5rem; }
+.detailText   { font-size: 0.95rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 1.1rem; }
+
+.expectTitle  { font-size: 1.15rem; font-weight: 700; color: var(--gray-900); margin: 2rem 0 1rem; }
+
+.stepList { display: flex; flex-direction: column; gap: 0.9rem; }
+
+.stepItem {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.stepBubble {
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--green-9);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepText { font-size: 0.95rem; color: var(--gray-600); line-height: 1.6; padding-top: 0.15rem; }
+
+.missionCard {
+  background: var(--green-1);
+  border: 1px solid var(--green-2);
+  border-radius: var(--radius-2xl);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.missionIcon { font-size: 1.5rem; flex-shrink: 0; }
+.missionTitle { font-size: 0.9rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.25rem; }
+.missionBody  { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
+
+
+/* How made strip */
+.howMade { padding: 5rem 1.5rem; background: var(--gray-50); }
+
+.howGrid {
+  max-width: 48rem;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) { .howGrid { grid-template-columns: repeat(4, 1fr); } }
+
+.howIcon  { font-size: 1.75rem; display: block; margin-bottom: 0.4rem; }
+.howLabel { font-size: 0.85rem; color: var(--gray-500); }
+
+.ctaSection { padding: 5rem 1.5rem; text-align: center; }
+.ctaTitle   { font-size: 1.75rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.75rem; }
+.ctaBody    { font-size: 1rem; color: var(--gray-500); margin-bottom: 0; }

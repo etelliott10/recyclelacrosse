@@ -1,65 +1,131 @@
+import Link from "next/link";
 import Image from "next/image";
+import s from "./page.module.css";
 
-export default function Home() {
+const stats = [
+  { value: "100%", label: "Gear reused or recycled" },
+  { value: "0",    label: "Items sent to landfill" },
+  { value: "$25",  label: "Workout handles" },
+];
+
+const programs = [
+  {
+    icon: "🔥",
+    badge: "Broken shafts & heads",
+    badgeClass: "badgeOrange",
+    title: "Melt & Remake",
+    description:
+      "Scraps from broken shafts and heads are collected until there's enough to melt. Remolded into brand-new gear — donated to players who need them.",
+    cta: null,
+  },
+  {
+    icon: "💪",
+    badge: "Broken shafts",
+    badgeClass: "badgeBlue",
+    title: "Workout Handles",
+    description:
+      "Broken shafts cut down into durable training handles — $25 each. 30% of every sale goes directly toward purchasing new lacrosse equipment for kids.",
+    cta: { label: "Coming Soon — Join Waitlist", href: "/handles" },
+  },
+  {
+    icon: "🎁",
+    badge: "Usable gear",
+    badgeClass: "badgeGreen",
+    title: "Direct Donation",
+    description:
+      "Gear still in good shape goes straight to children and schools in Utah that can't afford new equipment. Every kid deserves a chance to play.",
+    cta: null,
+  },
+];
+
+const gearImages = [
+  { src: "https://images.unsplash.com/photo-1661895610423-3362a79211c4?w=500&q=80", alt: "Lacrosse head",          label: "Heads"       },
+  { src: "https://images.unsplash.com/photo-1624992152845-9e54aab7aa86?w=500&q=80", alt: "Lacrosse shaft",         label: "Shafts"      },
+  { src: "https://images.unsplash.com/photo-1623156884380-a080a56ddc93?w=500&q=80", alt: "Lacrosse helmet",        label: "Helmets"     },
+  { src: "https://images.unsplash.com/photo-1531951844469-c0ac27049ad0?w=500&q=80", alt: "Lacrosse pads & gloves", label: "Pads & Gloves" },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero */}
+      <section className={s.hero}>
+        <div className={s.heroInner}>
+          <span className={s.badge}>Utah&apos;s Lacrosse Gear Recycling Program</span>
+          <h1 className={s.heroTitle}>
+            Don&apos;t Toss It.{" "}
+            <span className={s.heroAccent}>Give It a Second Life.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className={s.heroSubtext}>
+            We recycle broken lacrosse gear into new equipment, repurpose shafts into
+            $25 workout handles, and donate usable gear directly to kids and Utah schools.
           </p>
+          <div className={s.heroBtns}>
+            <Link href="/donate" className={s.btnPrimary}>Submit Your Gear</Link>
+            <Link href="/how-it-works" className={s.btnOutline}>See How It Works</Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Stats */}
+      <section className={s.stats}>
+        <div className={s.statsGrid}>
+          {stats.map(({ value, label }) => (
+            <div key={label}>
+              <span className={s.statValue}>{value}</span>
+              <span className={s.statLabel}>{label}</span>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Gear images */}
+      <section className={s.gearSection}>
+        <div className={s.gearInner}>
+          <p className={s.sectionEyebrow}>We Accept All Types of Gear</p>
+          <div className={s.gearGrid}>
+            {gearImages.map(({ src, alt, label }) => (
+              <div key={label} className={s.gearItem}>
+                <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 50vw, 25vw" />
+                <div className={s.gearOverlay}>
+                  <span className={s.gearLabel}>{label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Programs */}
+      <section className={s.programs}>
+        <div className={s.sectionInner}>
+          <h2 className={s.sectionTitle}>Three Ways We Put Gear to Work</h2>
+          <p className={s.sectionSubtext}>Every piece of equipment we receive has a path — broken or not.</p>
+          <div className={s.programGrid}>
+            {programs.map(({ icon, badge, badgeClass, title, description, cta }) => (
+              <div key={title} className={s.card}>
+                <span className={s.cardIcon}>{icon}</span>
+                <span className={`${s.cardBadge} ${s[badgeClass as keyof typeof s]}`}>{badge}</span>
+                <h3 className={s.cardTitle}>{title}</h3>
+                <p className={s.cardDesc}>{description}</p>
+                {cta && <Link href={cta.href} className={s.cardCta}>{cta.label}</Link>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className={s.cta}>
+        <div className={s.ctaInner}>
+          <h2 className={s.ctaTitle}>Have Old Lacrosse Gear?</h2>
+          <p className={s.ctaText}>
+            Whether it&apos;s a cracked shaft, a worn-out head, or a full bag of unused gear —
+            submit the form and Elijah will reach out with next steps.
+          </p>
+          <Link href="/donate" className={s.btnGreen}>Submit Gear Now</Link>
+        </div>
+      </section>
+    </>
   );
 }

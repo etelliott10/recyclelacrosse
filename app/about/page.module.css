@@ -1,0 +1,87 @@
+.founderSection { padding: 5rem 1.5rem; }
+
+.founderInner {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .founderInner { flex-direction: row; }
+}
+
+.founderImg {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) { .founderImg { margin: 0; } }
+
+.imgWrap {
+  position: relative;
+  width: 14rem;
+  height: 18rem;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.founderName  { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin-top: 1rem; }
+.founderBadge {
+  display: inline-block;
+  background: var(--green-2);
+  color: var(--green-10);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-top: 0.4rem;
+}
+
+.storyContent { flex: 1; }
+
+.storyTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.storyText {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
+
+/* Values */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) { .valuesGrid { grid-template-columns: repeat(2, 1fr); } }
+
+.valueCard {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-2xl);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.valueIcon  { font-size: 1.75rem; flex-shrink: 0; }
+.valueTitle { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.35rem; }
+.valueBody  { font-size: 0.875rem; color: var(--gray-500); line-height: 1.65; }
+
+/* CTA */
+.ctaSection { padding: 5rem 1.5rem; text-align: center; }
+.ctaTitle   { font-size: 1.75rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.75rem; }
+.ctaBody    { font-size: 1rem; color: var(--gray-500); max-width: 28rem; margin: 0 auto; line-height: 1.7; }

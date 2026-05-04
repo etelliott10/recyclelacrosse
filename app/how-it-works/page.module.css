@@ -1,0 +1,65 @@
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) { .stepsGrid { grid-template-columns: repeat(3, 1fr); } }
+
+.stepIcon  { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+.stepNum   { font-size: 0.75rem; font-weight: 700; color: var(--green-9); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.4rem; }
+.stepTitle { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem; }
+.stepBody  { font-size: 0.9rem; color: var(--gray-500); line-height: 1.65; }
+
+.tracksGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) { .tracksGrid { grid-template-columns: repeat(3, 1fr); } }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardIcon  { font-size: 2rem; }
+.cardTitle { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); }
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.badgeOrange { background: var(--orange-100); color: var(--orange-600); }
+.badgeBlue   { background: var(--blue-100);   color: var(--blue-600);   }
+.badgeGreen  { background: var(--green-2);    color: var(--green-10);   }
+
+.note { font-size: 0.8rem; color: var(--gray-400); font-style: italic; }
+
+.stepList { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.25rem; }
+
+.stepItem {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.55;
+}
+
+.stepNum2 { font-weight: 700; color: var(--gray-300); flex-shrink: 0; }
+
+.ctaSection { padding: 5rem 1.5rem; text-align: center; }
+.ctaTitle   { font-size: 1.75rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.75rem; }
+.ctaBody    { font-size: 1rem; color: var(--gray-500); margin-bottom: 0; }

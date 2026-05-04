@@ -1,0 +1,110 @@
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.hint { font-size: 0.8rem; font-weight: 400; color: var(--gray-400); }
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--gray-900);
+  background: #fff;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input::placeholder,
+.textarea::placeholder { color: var(--gray-400); }
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--green-6);
+  box-shadow: 0 0 0 3px rgba(82,183,136,0.18);
+}
+
+.textarea { resize: none; line-height: 1.6; }
+
+/* Toggle group for gear types */
+.toggleGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.toggleItem {
+  padding: 0.6rem 0.85rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--gray-700);
+  background: #fff;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.toggleItem:hover { border-color: var(--green-6); }
+
+.toggleItem[data-state="on"] {
+  background: var(--green-9);
+  color: #fff;
+  border-color: var(--green-9);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--green-9);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.submitBtn:hover:not(:disabled) { background: var(--green-10); }
+.submitBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.errorMsg {
+  font-size: 0.875rem;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 0.65rem 1rem;
+}
+
+.privacy {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gray-400);
+}
+
+/* Success */
+.success {
+  background: var(--green-1);
+  border: 1.5px solid var(--green-3);
+  border-radius: var(--radius-2xl);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.successIcon  { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.successTitle { font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.75rem; }
+.successBody  { font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; }

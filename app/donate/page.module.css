@@ -1,0 +1,27 @@
+.acceptStrip {
+  background: var(--green-1);
+  border-bottom: 1px solid var(--green-2);
+  padding: 1.5rem;
+}
+
+.acceptList {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+}
+
+.acceptItem {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.formSection { padding: 5rem 1.5rem; }
+
+.formInner { max-width: 38rem; margin: 0 auto; }
+
+.formTitle   { font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.4rem; }
+.formSubtext { font-size: 0.95rem; color: var(--gray-500); margin-bottom: 2.5rem; }
